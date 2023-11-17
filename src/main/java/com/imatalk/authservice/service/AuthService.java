@@ -49,10 +49,6 @@ public class AuthService {
         }
     }
 
-
-
-
-
     public ResponseEntity<CommonResponse> login(LoginRequest request) {
 
         UserAuthInfo userAuthInfo = userService.getUserAuthInfoByEmail(request.getEmail());
@@ -60,7 +56,6 @@ public class AuthService {
         if (userAuthInfo == null || !passwordEncoder.matches(request.getPassword(), userAuthInfo.getHashPassword())) {
             throw new ApplicationException("Incorrect credentials");
         }
-
 
         String token = jwtService.generateToken(userAuthInfo);
         LoginResponse response = LoginResponse.builder()
