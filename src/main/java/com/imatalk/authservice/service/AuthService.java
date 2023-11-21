@@ -1,7 +1,6 @@
 package com.imatalk.authservice.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.imatalk.authservice.controller.UserService;
 import com.imatalk.authservice.dto.request.LoginRequest;
 import com.imatalk.authservice.dto.request.RegistrationRequest;
 import com.imatalk.authservice.dto.request.SaveUserRequest;
@@ -10,14 +9,10 @@ import com.imatalk.authservice.dto.response.LoginResponse;
 import com.imatalk.authservice.dto.response.UserAuthInfo;
 import com.imatalk.authservice.dto.response.UserProfile;
 import com.imatalk.authservice.exception.ApplicationException;
-import com.imatalk.authservice.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor

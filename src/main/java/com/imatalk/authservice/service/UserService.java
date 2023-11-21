@@ -1,4 +1,4 @@
-package com.imatalk.authservice.controller;
+package com.imatalk.authservice.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.imatalk.authservice.dto.request.SaveUserRequest;
